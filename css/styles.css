@@ -6,7 +6,7 @@
     --color-body: #918ca4;
 }
 
-/************* Typography ***************/
+/********** Typography **********/
 
 html {
     /* 62.5% of default value (16px) = 10px*/
@@ -63,7 +63,7 @@ for laptop and desktop screens. */
     }
 }
 
-/************ Links ************/
+/********** Links **********/
 a {
     text-decoration: none;
 }
@@ -102,7 +102,7 @@ le breakpoint pour être plus responsive*/
     
 }
 
-/* Badges */
+/********** Badges **********/
 /* 2nd principle of object oriented CSS: We should seperate structure from skin 
     So we gonna define 2 differents class
     - 1 class to give the basic structure in terms of padding and font-size
@@ -139,4 +139,35 @@ le breakpoint pour être plus responsive*/
     .badge--small {
         font-size: 1.2rem;
     }
+}
+
+/********** Lists ***********/
+.list {
+    list-style: none; /* Get rid of the default bullet point  */
+    padding-left: 0;/* Get rid of the padding apply by browser by default */
+    color: var(--color-headings); /* Comme les list n'héritent pas l'attribut color du body on va set nous memes */
+}
+
+/* We have to distinguish inline list and vertical list which the used by default for the previous one */
+.list--inline .list__item{
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.list--tick {
+    list-style-image: url(../images/tick.svg);
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.list--tick .list__item {
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .list--tick .list__item {
+        padding-left: 0;
+    }
+    
 }
