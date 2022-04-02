@@ -274,6 +274,7 @@ le breakpoint pour être plus responsive*/
     color: var(--color-headings); 
 }
 
+/* For modifying the placeholder */
 ::placeholder {
     color: #cdcbd7;
 }
