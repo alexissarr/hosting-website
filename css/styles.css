@@ -101,3 +101,42 @@ le breakpoint pour être plus responsive*/
     }
     
 }
+
+/* Badges */
+/* 2nd principle of object oriented CSS: We should seperate structure from skin 
+    So we gonna define 2 differents class
+    - 1 class to give the basic structure in terms of padding and font-size
+    - other class to give the element different skin: color and sizes 
+*/
+.badge {
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+}
+
+/* We use here the BEM naming convention */
+.badge--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.badge--secondary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.badge--small {
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .badge {
+        font-size: 1.5rem;
+    }
+
+    .badge--small {
+        font-size: 1.2rem;
+    }
+}
