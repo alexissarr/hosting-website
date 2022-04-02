@@ -6,7 +6,7 @@
     --color-body: #918ca4;
 }
 
-/********** Typography **********/
+/* ********** Typography ********** */
 
 html {
     /* 62.5% of default value (16px) = 10px*/
@@ -63,7 +63,7 @@ for laptop and desktop screens. */
     }
 }
 
-/********** Links **********/
+/* ********** Links ********** */
 a {
     text-decoration: none;
 }
@@ -102,7 +102,7 @@ le breakpoint pour être plus responsive*/
     
 }
 
-/********** Badges **********/
+/* ********** Badges ********** */
 /* 2nd principle of object oriented CSS: We should seperate structure from skin 
     So we gonna define 2 differents class
     - 1 class to give the basic structure in terms of padding and font-size
@@ -141,7 +141,7 @@ le breakpoint pour être plus responsive*/
     }
 }
 
-/********** Lists ***********/
+/* ********** Lists *********** */
 .list {
     list-style: none; /* Get rid of the default bullet point  */
     padding-left: 0;/* Get rid of the padding apply by browser by default */
@@ -170,4 +170,24 @@ le breakpoint pour être plus responsive*/
         padding-left: 0;
     }
     
+}
+
+/* ********** Icons ********** */
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon--primary {
+    fill: var(--color-primary); /* Only apply to svg element */
+}
+
+.icon-container {
+    background: gold;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
