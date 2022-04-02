@@ -6,14 +6,18 @@
     --color-body: #918ca4;
 }
 
+/************* Typography ***************/
+
 html {
     /* 62.5% of default value (16px) = 10px*/
     font-size: 62.5%;
 }
 
 body {
+    /* We are using here a mobile first approach, we gonna define media query to adapt our components for larger screen */
     color: var(--color-body);
     font-family: Inter, Arial, Helvetica, sans-serif ;
+    /* Mobile device are small we use larger font for our body text and links so they are more readable */
     font-size: 2.4rem;
     line-height: 1.5; /* 1.5 x the current font-size */
 }
@@ -39,7 +43,7 @@ h3 {
 p {
     margin-top: 0;
 }
-/* 1024px is breakpoint used by many framework like bootstrap 
+/* Desktop and Laptop: 1024px is breakpoint used by many framework like bootstrap 
 for laptop and desktop screens. */
 @media screen and (min-width: 1024px) {
     body {
@@ -57,4 +61,43 @@ for laptop and desktop screens. */
     h3 {
         font-size: 2.4rem;
     }
+}
+
+/************ Links ************/
+a {
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.link-arrow::after {
+    content: '-->';
+    margin-left: 5px;
+    transition: margin 0.15s;
+
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+/* We define media queries for each section, diviser pour regner; ça évite
+d'avoir un media query que l'on va venir updater à chaque fois que l'on
+modifie une section 
+
+Also we don't wanna have a single place for defining the breakpoints 
+because these breakpoins really depends on the component we are designing
+Peut etre que pour certains component on voudra bien changer
+le breakpoint pour être plus responsive*/
+
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
+    }
+    
 }
