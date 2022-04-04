@@ -303,3 +303,26 @@ le breakpoint pour être plus responsive*/
         font-size: 1.5rem;
     }
 }
+
+/* ********** Cards ********** */
+.card {
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    overflow: hidden; /* The bg color set to  card__header element induce overflow so we have to hid it here*/
+}
+
+/* the header element cannot exist outside of this card element that's why we put __ */
+.card__header, 
+.card__body {
+    padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+    background: var(--color-primary);
+    color: white;
+}
+
+.card--secondary .card__header {
+    background: var(--color-secondary);
+    color: white;
+}
