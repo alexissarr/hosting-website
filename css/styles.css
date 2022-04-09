@@ -461,3 +461,9 @@ le breakpoint pour être plus responsive*/
         font-size: 1.6rem;
     }
 }
+
+
+/* ************* Grids ************* */
+.grid {
+    display: grid;
+}
