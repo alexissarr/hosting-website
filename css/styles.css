@@ -570,3 +570,31 @@ le breakpoint pour être plus responsive*/
         justify-self: start;
     }
 }
+
+
+/* ************ Collapsibles ************* */
+.collapsible__header {
+    display: flex;
+    justify-content: space-between; /* Crée un espace entre le texte header et l'icone chevron */
+}
+
+.collapsible__heading {
+    margin-top: 0;
+}
+
+.collapsible__chevron {
+    transform: rotate(-90deg);
+}
+
+.collapsible__content {
+    display: none; /* To make disappear the content  */
+}
+
+.collapsible__expanded .collapsible__chevron {
+    transform: rotate(0);
+    transition: transform 0.3s; /* The transform should happen in 0.3s */
+}
+
+.collapsible__expanded .collapsible__content {
+    display: block; /* To make visible the content */
+}
