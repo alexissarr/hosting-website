@@ -587,14 +587,18 @@ le breakpoint pour être plus responsive*/
 }
 
 .collapsible__content {
-    display: none; /* To make disappear the content  */
+    max-height: 0; /*  To make diseappear the content */
+    overflow: hidden;
+    transition: all 0.3s; /* all to animate all properties */
+    opacity: 0;
 }
 
-.collapsible__expanded .collapsible__chevron {
+.collapsible--expanded .collapsible__chevron {
     transform: rotate(0);
     transition: transform 0.3s; /* The transform should happen in 0.3s */
 }
 
-.collapsible__expanded .collapsible__content {
-    display: block; /* To make visible the content */
+.collapsible--expanded .collapsible__content {
+    max-height: 100vh; /* To make visible the content using the max-height the content wont take all the viewport height but just what is needed to display its content*/
+    opacity: 1;
 }
