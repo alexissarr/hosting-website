@@ -644,3 +644,71 @@ le breakpoint pour être plus responsive*/
     max-width: 1140px;
     margin: 0 auto; /* Pour permettre au block de tjrs se placer au milieu de l'ecran mm son container is wider, if we have extra space the space will be equally distributed to the side left and right ou this block */
 }
+
+/* *********** Navigation Bar */
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem; /* To avoid the toggler button to be so close to the edges */
+    align-items: center;
+
+}
+
+.nav__list {
+    width: 100%; /* We want to put the list in the second line of the nav */
+    margin: 0;
+}
+
+.nav__item {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #222;
+}
+
+/* Eskil est possible que tu décides de remplacer le anchor element <a> un jour par un autre dans list item ? Non donc tu peux utiliser le pseudo selector */
+.nav__item > a {
+    color: #d2d0db;
+    transition: color .3s;
+}
+
+.nav__item > a:hover {
+    color: #fff;
+}
+
+.nav__toggler {
+    opacity: .5;
+    cursor: pointer;
+    transition: box-shadow .15s;
+}
+
+/* .nav.collapsible--expanded selectionne un element qui a en mm temps les 2 class  .nav et .collapsible--expanded*/
+.nav.collapsible--expanded .nav__toggler {
+    opacity: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px #666;
+}
+
+/*  To move the logo down */
+.nav__brand {
+    transform: translateY(5px);
+}
+
+@media screen and (min-width: 768px) {
+    .nav__toggler {
+        display: none; /* To make invisible and inactive the toggler button */
+    }
+
+    .nav__list {
+        width: auto; /* To make the list take all necessary space */
+        display: flex; /* To layout the list horizontally */
+        font-size: 1.6rem; /* To reduce the list font-size */
+        /* To make the list always visible */
+        max-height: 100%;
+        opacity: 1;
+    }
+
+    .nav__item {
+        border: 0;
+    }
+}
