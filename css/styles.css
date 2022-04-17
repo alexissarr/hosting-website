@@ -357,10 +357,17 @@ le breakpoint pour être plus responsive*/
     color: white;
 }
 
+.card--primary .badge--primary {
+    background: #126de4;
+}
+
 .card--secondary .badge--secondary {
     background: #02cdf1;
 }
 /* ********** Plans *********** */
+.plan {
+    transition: transform .2 ease-out;
+}
 .plan__name {
     color: white;
     margin: 0;
@@ -391,6 +398,10 @@ le breakpoint pour être plus responsive*/
     letter-spacing: 1px;
 }
 
+.plan--popular {
+    transform: scale(1.1); /* To make this plan larger */
+}
+
 .plan--popular .card__header {
     position: relative;
 }
@@ -403,6 +414,14 @@ le breakpoint pour être plus responsive*/
     position: absolute; /* We should make the container/parent a relatively position element */
     top: -6px;
     right: 5%;
+}
+
+.plan:hover {
+    transform: scale(1.05); /* To make the plan larger when we hover the mouse on it */
+}
+
+.plan--popular:hover {
+    transform: scale(1.15); /* To make the plan larger when we hover the mouse on it */
 }
 
 @media screen and (min-width: 1024px) {
@@ -774,3 +793,13 @@ le breakpoint pour être plus responsive*/
         grid-template-columns: repeat(auto-fit, minmax(10rem,1fr)); /* We gonna divide the space into 6 fractions and give each fraction a space of 1fr */
     }
 }
+
+/* *********** Plans Block ************  */
+.block-plans .grid {
+    gap: 8rem 4rem; /* To add space between the grid elements */
+}
+
+.block-plans .card {
+    max-width: 500px; /* With this on limite la largeur des card comme ça sur les écrans large la largeur doesn't expand to fill all avalaible space */
+    margin: 0 auto/* To put it in the center, we put auto to horizontal margin */
+}  
