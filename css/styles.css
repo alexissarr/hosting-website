@@ -224,13 +224,21 @@ le breakpoint pour être plus responsive*/
     cursor: pointer;
     font-size: 1.8rem;
     font-weight: 600;
+    margin: 1rem 0;
+    outline: 0;
     padding: 2rem 3rem;
+    text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
-    text-align: center;
-    margin: 1rem 0;
 }
 
+/* If we have an icon inside a btn element size the icon this way */
+.btn .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle; /* To set the icon to the middle of the btn  */
+}
 /* Here we define the skin classes  */
 .btn--primary {
     background: var(--color-primary);
@@ -312,7 +320,7 @@ le breakpoint pour être plus responsive*/
 .input-group .input {
     border: 0;
     flex-grow: 1;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -738,5 +746,31 @@ le breakpoint pour être plus responsive*/
     .hero__content {
         text-align: left;
         align-self: center;
+    }
+}
+
+/************ Block Domain *********** */
+.block-domain .input-group {
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    margin: 4rem auto;
+    max-width: 670px;
+}
+
+.block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);/* If we don't set this our item will be so close */
+    font-size: 2rem;
+    font-weight: 600;
+    justify-content: center; 
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .block-domain__prices {
+        /* With the attribute auto-fit the grid will try to create as many columns as needed to fit all this items  */
+        grid-template-columns: repeat(auto-fit, minmax(10rem,1fr)); /* We gonna divide the space into 6 fractions and give each fraction a space of 1fr */
     }
 }
