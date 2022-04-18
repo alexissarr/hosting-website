@@ -674,6 +674,7 @@ le breakpoint pour être plus responsive*/
 
 .block__header {
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 /* On veut limiter la taille des elements à 1140px comme ça meme si l'ecran est plus grand que les elements de stretch pas pour prendre plus d'espace, cest bien pour la lecture aussi */
