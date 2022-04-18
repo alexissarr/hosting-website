@@ -203,7 +203,7 @@ le breakpoint pour être plus responsive*/
 }
 
 .icon-container {
-    background: gold;
+    background: #f3f9fa;
     width: 64px;
     height: 64px;
     border-radius: 100%;
@@ -803,3 +803,22 @@ le breakpoint pour être plus responsive*/
     max-width: 500px; /* With this on limite la largeur des card comme ça sur les écrans large la largeur doesn't expand to fill all avalaible space */
     margin: 0 auto/* To put it in the center, we put auto to horizontal margin */
 }  
+
+/* ********** Features ********** */
+.feature {
+    gap: 4rem 2rem;
+    margin: 12rem 0;
+}
+
+/* Target the first  */
+.feature:first-of-type {
+    margin-top: 6rem;    
+}
+
+.feature__heading {
+    margin: 1rem 0;
+}
+
+.feature__image {
+    width: 100%; /* To make our image responsive */
+}
