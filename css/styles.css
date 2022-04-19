@@ -651,7 +651,7 @@ le breakpoint pour être plus responsive*/
 
 .block--dark {
     background: #000;
-    color: #7b858b
+    color: #7b858b;
 }
 
 /* In block--dark if we have a heading that heading should be in white  */
@@ -852,5 +852,83 @@ le breakpoint pour être plus responsive*/
     .block-showcase__image > img {
         width: auto; /* To show the image in its actual size */
         max-width: 700px; /* The image doesn't grow larger then this size */
+    }
+}
+
+/* *********** Footer *********** */
+.footer {
+    background: #232323;
+}
+
+.footer a {
+    color: #777;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer__section {
+    padding: 2rem;
+    border-bottom: 1px solid #393939;
+}
+
+.footer__section .list {
+    margin: 0;
+}
+
+.footer__heading {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer__brand {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.footer__brand img {
+    /* TODO: Consider refactoring this and applying it to all images. */
+    width: 100%;
+    max-width: 230px; /* We set it to the real width of the image */
+}
+
+.footer__copyright {
+    font-size: 2.1rem;
+    color:#fff;
+    opacity: .3;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__sections {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* So with this auto-fit and minmax attribute if we decide to add in the future another section in our footer grid we don't have to worry about revisiting this code to update */  
+    }
+
+    /* In our footer if we have a collapsible__chevron it should be hidden */
+    .footer .collapsible__chevron {
+        display: none;
+    }
+    
+    .footer .collapsible__content {
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand {
+        order: -1; /* So we move this element to the left, it'll we shown before all other element */
+        margin-top: 1rem;
+    }
+    
+    .footer__copyright {
+        font-size: 1.5rem;
+    }
+
+    .footer__section {
+        border: 0;
+    }
+
+    .footer__heading {
+        font-size: 1.6rem;
     }
 }
